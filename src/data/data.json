@@ -1,4 +1,26 @@
 {
+  "navLink": [
+    {
+        "page": "/",
+        "number": "00",
+        "content": "Home"
+    },
+    {
+        "page": "/destination",
+        "number": "01",
+        "content": "Destination"
+    },
+    {
+        "page": "/crew",
+        "number": "02",
+        "content": "Crew"
+    },
+    {
+        "page": "/technology",
+        "number": "03",
+        "content": "Technology"
+    }
+  ],
   "destinations": [
     {
       "name": "Moon",
