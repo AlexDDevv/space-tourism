@@ -1,0 +1,120 @@
+main {
+    text-align: center;
+    @include center;
+    flex-direction: column;
+    gap: 50px;
+    padding: 0 25px;
+
+    @media screen and (min-width: 375px) {
+        gap: 100px;
+    }
+    @media screen and (min-width: 768px) {
+        gap: 150px;
+    }
+    @media screen and (min-width: 1024px) {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 100px;
+        gap: 100px;
+    }
+
+    section {
+        @include center;
+        flex-direction: column;
+        gap: 16px;
+
+        @media screen and (min-width: 1024px) {
+            gap: 24px;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        .travel {
+            text-transform: uppercase;
+            color: $textColor;
+            font-family: $barlowCondensed;
+            font-size: 1rem;
+            letter-spacing: 2.7px;
+
+            @media screen and (min-width: 768px) {
+                font-size: 1.25rem;
+            }
+            @media screen and (min-width: 1024px) {
+                font-size: 1.5rem;
+            }
+            @media screen and (min-width: 1440px) {
+                font-size: 1.75rem;
+            }
+        }
+        h1 {
+            text-transform: uppercase;
+            color: white;
+            font-family: $bellefair;
+            font-size: 5rem;
+            font-weight: 400;
+
+            @media screen and (min-width: 768px) {
+                font-size: 9rem;
+            }
+        }
+        .explication {
+            color: $textColor;
+            font-family: $barlow;
+            font-size: 0.85rem;
+            line-height: 22px;
+
+            @media screen and (min-width: 375px) {
+                font-size: 0.95rem;
+                line-height: 25px;
+                max-width: 415px;
+            }
+            @media screen and (min-width: 1024px) {
+                font-size: 1.15rem;
+                line-height: 32px;
+                max-width: 500px;
+            }
+        }
+    }
+    .explore {
+        text-transform: uppercase;
+        color: $black;
+        font-family: $bellefair;
+        font-size: 0.85rem;
+        letter-spacing: 1.25px;
+        background: white;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        @include center;
+        transition: box-shadow 0.2s ease-in-out;
+
+        &:hover {
+            box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.25);
+        }
+
+        @media screen and (min-width: 375px) {
+            font-size: 1.2rem;
+            letter-spacing: 1.5px;
+            height: 150px;
+            width: 150px;
+        }
+        @media screen and (min-width: 425px) {
+            font-size: 1.5rem;
+            letter-spacing: 1.75px;
+            height: 195px;
+            width: 195px;
+        }
+        @media screen and (min-width: 768px) {
+            font-size: 2rem;
+            letter-spacing: 2px;
+            height: 240px;
+            width: 240px;
+        }
+        @media screen and (min-width: 1440px) {
+            font-size: 2rem;
+            letter-spacing: 2px;
+            height: 270px;
+            width: 270px;
+        }
+    }
+}
