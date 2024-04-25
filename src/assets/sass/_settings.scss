@@ -14,14 +14,42 @@
 $bellefair: "Bellefair", serif;
 $barlow: "Barlow", sans-serif;
 $barlowCondensed: "Barlow Condensed", sans-serif;
-$white: #FFFFFF;
 $black: #0B0D17;
 $textColor: #D0D6F9;
-$bgMenu: #979797;
+$bgMenu: rgba(151, 151, 151, 0.04);
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
     list-style-type: none;
+}
+body {
+    background-image: url("/src/assets/home/background-home-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 100dvh;
+
+    @media screen and (min-width: 375px) and (max-width: 1024px) {
+        background-image: url("/src/assets/home/background-home-tablet.jpg");
+
+    }
+    @media screen and (min-width: 1024px) and (max-width: 2560px) {
+        background-image: url("/src/assets/home/background-home-desktop.jpg");
+
+    }
+}
+#root {
+    @media screen and (min-width: 1024px) {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
 }
