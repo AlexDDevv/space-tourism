@@ -2,7 +2,7 @@ import React from 'react'
 import logo from "../../assets/shared/logo.svg"
 import NavBar from './NavBar'
 
-export default function HeaderContent() {
+export default function Header() {
     return (
         <header>
             <div className="logo">
