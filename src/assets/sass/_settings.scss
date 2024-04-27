@@ -25,6 +25,7 @@ $bgMenu: rgba(151, 151, 151, 0.04);
     text-decoration: none;
     list-style-type: none;
 }
+
 body {
     background-image: url("/src/assets/home/background-home-mobile.jpg");
     background-repeat: no-repeat;
@@ -45,6 +46,7 @@ body {
 
     }
 }
+
 #root {
     @media screen and (min-width: 1024px) {
         height: 100%;
@@ -52,4 +54,25 @@ body {
         flex-direction: column;
         justify-content: space-around;
     }
+}
+
+.slide-in {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: $black;
+    transform-origin: bottom;
+    z-index: 2500;
+}
+.slide-out {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: $black;
+    transform-origin: top;
+    z-index: 2500;
 }
