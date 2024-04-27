@@ -1,12 +1,11 @@
 import React from 'react'
-import HeaderContent from '../components/header/HeaderContent'
 import HomeContent from '../components/home/HomeContent'
+import transition from '../utils/transition'
 
-export default function Home() {
+const Home = () => {
     return (
-        <>
-            <HeaderContent />
-            <HomeContent />
-        </>
+        <HomeContent />
     )
 }
+
+export default transition(Home)
