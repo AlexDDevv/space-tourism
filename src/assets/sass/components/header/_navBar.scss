@@ -4,20 +4,6 @@
         width: 60%;
         min-width: 450px;
     }
-    @media screen and (min-width: 1024px) {
-        &::before {
-            content: "";
-            width: 50%;
-            height: 1px;
-            background: rgba(151, 151, 151);
-            backdrop-filter: blur(100px);
-            position: absolute;
-            top: 50%;
-            right: 72%;
-            transform: translate(-50%, -50%);
-            z-index: 1000;
-        }
-    }
 
     .wrapper {
         display: flex;

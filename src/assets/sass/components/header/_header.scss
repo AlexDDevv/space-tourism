@@ -9,9 +9,29 @@ header {
         margin-bottom: 100px;
         padding: 0;
     }
+    @media screen and (min-width: 1024px) {
+        &::after {
+            content: "";
+            width: 28%;
+            height: 1px;
+            background: rgba(151, 151, 151);
+            backdrop-filter: blur(100px);
+            position: absolute;
+            top: 50%;
+            left: 27.5%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+
+            @media screen and (min-width: 1440px) {
+                width: 30%;
+                left: 28%;
+            }
+        }
+    }
 
     .logo {
         display: flex;
+        position: relative;
 
         @media screen and (min-width: 768px) {
             padding-left: 40px;
