@@ -1,35 +1,51 @@
-import React from 'react'
+import React, { useState } from 'react'
+import StarImg from './StarImg'
+import StarName from './StarName'
+import data from "../../data/data.json"
 
 export default function StarCarrousel() {
+    const [index, setIndex] = useState("Moon")
+    const [selectedStar, setSelectedStar] = useState(false)
+    const dataStar = data.destinations.find(obj => obj.name === index)
+
+    const handleStar = (e) => {
+        const changeStar = e.target.textContent
+        setIndex(changeStar)
+        setSelectedStar(!selectedStar)
+    }
+
     return (
         <>
-            <div className='top-part'>
-                <div className="stars-img-container">
-                    <div className="star-img">
-                        <img src="/destinationImg/image-moon.webp" alt={`Selected star: Moon`} />
-                    </div>
-                </div>
+            <div className='star-presentation'>
+                <StarImg     
+                    img={dataStar.images.webp}
+                    title={dataStar.name}
+                />
                 <div className="stars-name-container">
                     <ul className='stars-list'>
-                        <li className="star-li">Moon</li>
-                        <li className="star-li">Mars</li>
-                        <li className="star-li">Europa</li>
-                        <li className="star-li">Titan</li>
+                        {data.destinations.map((item, i) => (
+                            <StarName  
+                                key={i}
+                                selected={item.name === index}
+                                onClick={(e) => handleStar(e)}
+                                title={item.name}
+                            />
+                        ))}
                     </ul>
                 </div>
                 <div className="star-description">
-                    <h1>Moon</h1>
-                    <p>See our planet as you've never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you're there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.</p>
+                    <h2 className='title-star'>{dataStar.name}</h2>
+                    <p className='text-star'>{dataStar.description}</p>
                 </div>
             </div>
-            <div className="bottom-part">
+            <div className="journey-container">
                 <div className="distance">
-                    <h2>Avg. distance</h2>
-                    <h3>384,400 km</h3>
+                    <h3 className='title-journey'>Avg. distance</h3>
+                    <h4 className='text-journey'>{dataStar.distance}</h4>
                 </div>
                 <div className="travel-time">
-                    <h2>Est. travel time</h2>
-                    <h3>3 days</h3>
+                    <h3 className='title-journey'>Est. travel time</h3>
+                    <h4 className='text-journey'>{dataStar.travel}</h4>
                 </div>
             </div>
         </>
