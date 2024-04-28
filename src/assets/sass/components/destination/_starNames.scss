@@ -1,0 +1,44 @@
+.stars-list {
+    @include center;
+    gap: 30px;
+
+    .star-li {
+        color: $textColor;
+        font-family: $barlowCondensed;
+        font-size: 0.9rem;
+        letter-spacing: 2.35px;
+        text-transform: uppercase;
+        padding-bottom: 10px;
+        position: relative;
+        cursor: pointer;
+        transition: color 0.2s ease-in-out;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: white;
+            transition: width 0.2s ease-in-out;
+        }
+
+        &.selected {
+            color: white;
+
+            &::after {
+                width: 100%;
+            }
+        }
+
+        &:hover {
+            color: white;
+
+            &::after {
+                width: 100%;
+                background: rgba(255, 255, 255, 0.8)
+            }
+        }
+    }
+}
