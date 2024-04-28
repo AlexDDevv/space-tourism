@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function HomeContent() {
     return (
-        <main>
+        <main className='main-home'>
             <section>
                 <p className='travel'>So, you want to travel to</p>
                 <h1>Space</h1>

@@ -11,6 +11,12 @@
     justify-content: space-between;
 }
 
+@keyframes starRotation {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 $bellefair: "Bellefair", serif;
 $barlow: "Barlow", sans-serif;
 $barlowCondensed: "Barlow Condensed", sans-serif;
@@ -27,10 +33,9 @@ $bgMenu: rgba(151, 151, 151, 0.04);
 }
 
 body {
-    background-image: url("/src/assets/home/background-home-mobile.jpg");
+    background-image: url("/src/assets/destination/background-destination-mobile.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    color: white;
     position: relative;
     overflow: hidden;
     max-width: 1440px;
@@ -38,11 +43,11 @@ body {
     height: 100dvh;
 
     @media screen and (min-width: 375px) and (max-width: 1024px) {
-        background-image: url("/src/assets/home/background-home-tablet.jpg");
+        background-image: url("/src/assets/destination/background-destination-tablet.jpg");
 
     }
     @media screen and (min-width: 1024px) and (max-width: 2560px) {
-        background-image: url("/src/assets/home/background-home-desktop.jpg");
+        background-image: url("/src/assets/destination/background-destination-desktop.jpg");
 
     }
 }
