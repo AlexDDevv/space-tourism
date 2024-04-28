@@ -1,9 +1,8 @@
-main {
-    text-align: center;
+.main-home {
     @include center;
     flex-direction: column;
     gap: 50px;
-    padding: 0 25px;
+    padding: 20px 25px 0 25px;
 
     @media screen and (min-width: 375px) {
         gap: 75px;
@@ -22,6 +21,7 @@ main {
         @include center;
         flex-direction: column;
         gap: 16px;
+        text-align: center;
 
         @media screen and (min-width: 1024px) {
             gap: 24px;
