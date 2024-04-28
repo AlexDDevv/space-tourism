@@ -1,11 +1,26 @@
 .main-destination {
-    padding: 0 25px 25px 25px;
-    text-align: center;
+    margin-top: 30px;
+    padding: 0 25px;
+
+    @media screen and (min-width: 768px) {
+        padding: 0 30px;
+    }
+    @media screen and (min-width: 1024px) {
+        margin-top: 65px;
+        padding: 0;
+    }
 
     section {
         @include center;
         flex-direction: column;
         gap: 25px;
+
+        @media screen and (min-width: 768px) {
+            gap: 40px;
+        }
+        @media screen and (min-width: 1024px) {
+            gap: 50px;             
+        }
 
         .pick {
             color: white;
@@ -14,6 +29,15 @@
             font-weight: 200;
             letter-spacing: 2.7px;
             text-transform: uppercase;
+
+            @media screen and (min-width: 768px) {
+                font-size: 1.25rem;
+                letter-spacing: 3.35px;
+                width: 100%;
+            }
+            @media screen and (min-width: 1024px) {
+                padding-left: 140px;
+            }
     
             span {
                 color: rgb(151, 151, 151, 0.5);
@@ -26,65 +50,135 @@
             flex-direction: column;
             gap: 20px;
 
+            @media screen and (min-width: 768px) {
+                gap: 40px;
+            }
+            @media screen and (min-width: 1024px) {
+                flex-direction: row;
+                gap: 120px;
+            }
+            @media screen and (min-width: 1440px) {
+                gap: 150px;
+            }
+
             .star-img-container {
                 width: 150px;
                 height: 150px;
                 display: flex;
                 animation: starRotation 40s infinite linear;
+
+                @media screen and (min-width: 768px) {
+                    height: 300px;
+                    width: 300px;
+                }
+                @media screen and (min-width: 1024px) {
+                    height: 375px;
+                    width: 375px;    
+                }
     
                 img {
                     width: 100%;
                 }
             }
-            .star-description {
-                .title-star {
-                    color: white;
-                    font-family: $bellefair;
-                    font-size: 3.5rem;
-                    font-weight: 400;
-                    margin-bottom: 20px;
-                    text-transform: uppercase;
-                }
-                .text-star {
-                    color: $textColor;
-                    font-family: $barlow;
-                    font-size: 0.95rem;
-                    line-height: 23px;
-                }
-            }
-        }
-        .journey-container {
-            position: relative;
-            padding-top: 25px;
+            .star-content {
+                @include center;
+                flex-direction: column;
+                text-align: center;
+                gap: 25px;
 
-            &::before {
-                content: "";
-                background: rgba(151, 151, 151, 0.5);
-                height: 1px;
-                width: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
-            }
+                @media screen and (min-width: 768px) {
+                    gap: 30px;
+                }
+                @media screen and (min-width: 1024px) {
+                    align-items: flex-start;
+                    text-align: left;
+                    gap: 40px;
+                }
 
-            .distance {
-                margin-bottom: 30px;
-            }
-            .title-journey {
-                color: $textColor;
-                font-family: $barlowCondensed;
-                font-size: 0.9rem;
-                font-weight: 400;
-                letter-spacing: 2.35px;
-                text-transform: uppercase;
-                margin-bottom: 8px;
-            }
-            .text-journey {
-                color: white;
-                font-family: $bellefair;
-                font-size: 1.75rem;
-                font-weight: 400;
-                text-transform: uppercase;
+                .star-description {
+                    .title-star {
+                        color: white;
+                        font-family: $bellefair;
+                        font-size: 3.5rem;
+                        font-weight: 400;
+                        margin-bottom: 20px;
+                        text-transform: uppercase;
+    
+                        @media screen and (min-width: 768px) {
+                            font-size: 5rem;
+                        }
+                        @media screen and (min-width: 1024px) {
+                            font-size: 6.25rem;
+                        }
+                    }
+                    .text-star {
+                        color: $textColor;
+                        font-family: $barlow;
+                        font-size: 0.95rem;
+                        line-height: 23px;
+                        max-width: 570px;
+
+                        @media screen and (min-width: 768px) {
+                            font-size: 1rem;
+                            line-height: 28px;
+                        }
+                        @media screen and (min-width: 1024px) {
+                            font-size: 1.15rem;
+                            line-height: 32px;
+                            max-width: 450px;
+                        }
+                    }
+                }
+                .journey-container {
+                    position: relative;
+                    padding-top: 25px;
+        
+                    @media screen and (min-width: 768px) {
+                        @include center;
+                        gap: 100px;
+                        padding-top: 40px;
+                        width: 100%;
+                        max-width: 650px;
+                    }
+                    @media screen and (min-width: 1024px) {
+                        justify-content: flex-start;
+                        padding-top: 30px;
+                    }
+        
+                    &::before {
+                        content: "";
+                        background: rgba(151, 151, 151, 0.5);
+                        height: 1px;
+                        width: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+        
+                    .distance {
+                        margin-bottom: 30px;
+        
+                        @media screen and (min-width: 768px) {
+                            margin-bottom: 0;
+                        }
+                    }
+                    .title-journey {
+                        color: $textColor;
+                        font-family: $barlowCondensed;
+                        font-size: 0.9rem;
+                        font-weight: 400;
+                        letter-spacing: 2.35px;
+                        text-transform: uppercase;
+                        margin-bottom: 8px;
+                    }
+                    .text-journey {
+                        color: white;
+                        font-family: $bellefair;
+                        font-size: 1.75rem;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                    }
+                }
             }
         }
     }
