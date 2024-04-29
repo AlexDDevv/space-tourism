@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import StarImg from './StarImg'
 import StarName from './StarName'
+import StarInfos from './StarInfos'
 import data from "../../data/data.json"
+import { AnimatePresence } from 'framer-motion'
 
 export default function StarCarrousel() {
     const [index, setIndex] = useState("Moon")
     const [selectedStar, setSelectedStar] = useState(false)
-    const dataStar = data.destinations.find(obj => obj.name === index)
 
     const handleStar = (e) => {
         const changeStar = e.target.textContent
@@ -16,10 +17,17 @@ export default function StarCarrousel() {
 
     return (
         <div className='star-presentation'>
-            <StarImg
-                img={dataStar.images.webp}
-                title={dataStar.name}
-            />
+            <AnimatePresence mode='wait'>
+                {data.destinations.map((item) => (
+                    item.name === index && (
+                        <StarImg
+                            key={item.name}
+                            img={item.images.webp}
+                            title={item.name}
+                        />
+                    )
+                ))}
+            </AnimatePresence>
             <div className="star-content">
                 <div className="stars-name-container">
                     <ul className='stars-list'>
@@ -33,20 +41,19 @@ export default function StarCarrousel() {
                         ))}
                     </ul>
                 </div>
-                <div className="star-description">
-                    <h2 className='title-star'>{dataStar.name}</h2>
-                    <p className='text-star'>{dataStar.description}</p>
-                </div>
-                <div className="journey-container">
-                    <div className="distance">
-                        <h3 className='title-journey'>Avg. distance</h3>
-                        <h4 className='text-journey'>{dataStar.distance}</h4>
-                    </div>
-                    <div className="travel-time">
-                        <h3 className='title-journey'>Est. travel time</h3>
-                        <h4 className='text-journey'>{dataStar.travel}</h4>
-                    </div>
-                </div>
+                <AnimatePresence mode='wait'>
+                    {data.destinations.map((item) => (
+                        item.name === index && (
+                            <StarInfos
+                                key={item.name}
+                                name={item.name}
+                                description={item.description}
+                                distance={item.distance}
+                                travel={item.travel}
+                            />
+                        )
+                    ))}
+                </AnimatePresence>
             </div>
         </div>
     )
