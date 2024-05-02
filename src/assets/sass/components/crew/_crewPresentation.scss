@@ -1,0 +1,24 @@
+.crew-info {
+    .title-crew {
+        font-family: $bellefair;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    .rank-member {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+    .crew-name {
+        color: white;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    .crew-bio {
+        color: $textColor;
+        font-family: $barlow;
+        font-size: 0.95rem;
+        line-height: 25px;
+        max-width: 520px;
+    }   
+}
