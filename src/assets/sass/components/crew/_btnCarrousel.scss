@@ -1,0 +1,29 @@
+.btn-carrousel {
+    @include center;
+    gap: 15px;
+
+    .input-container {
+        .input-carrousel {
+            display: none;
+
+            &:checked {
+                +label {
+                    &::before {
+                        background: white;
+                    }
+                }
+            }
+        }
+        label {
+            &::before {
+                content: "";
+                height: 8px;
+                width: 8px;
+                background: rgb(151, 151, 151);
+                border-radius: 50%;
+                display: block;
+                cursor: pointer;
+            }
+        }
+    }
+}
