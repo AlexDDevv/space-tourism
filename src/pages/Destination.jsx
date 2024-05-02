@@ -6,7 +6,7 @@ const Destination = () => {
     return (
         <main className='main-destination'>
             <section>
-                <h1 className='pick'><span>01</span>Pick your destination</h1>
+                <h1 className='pick-star title-page'><span>01</span>Pick your destination</h1>
                 <StarCarrousel />
             </section>
         </main>
