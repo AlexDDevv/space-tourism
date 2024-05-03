@@ -26,28 +26,30 @@ export default function CrewCarrousel() {
                     )
                 ))}
             </AnimatePresence>
-            <div className="btn-carrousel">
-                {data.crew.map((input, radioIdx) => (
-                    <InputRadioCrew
-                        key={input.name}
-                        btn={input.name}
-                        checked={index === radioIdx}
-                        onChange={() => handleRadio(radioIdx)}
-                    />
-                ))}
-            </div>
-            <AnimatePresence mode='wait'>
-                {data.crew.map((item, idx) => (
-                    index === idx && (
-                        <CrewInfos
-                            key={item.name}
-                            rank={item.role}
-                            name={item.name}
-                            bio={item.bio}
+            <div className="flex">
+                <div className="btn-carrousel">
+                    {data.crew.map((input, radioIdx) => (
+                        <InputRadioCrew
+                            key={input.name}
+                            btn={input.name}
+                            checked={index === radioIdx}
+                            onChange={() => handleRadio(radioIdx)}
                         />
-                    )
-                ))}
-            </AnimatePresence>
+                    ))}
+                </div>
+                <AnimatePresence mode='wait'>
+                    {data.crew.map((item, idx) => (
+                        index === idx && (
+                            <CrewInfos
+                                key={item.name}
+                                rank={item.role}
+                                name={item.name}
+                                bio={item.bio}
+                            />
+                        )
+                    ))}
+                </AnimatePresence>
+            </div>
         </div>
     )
 }
