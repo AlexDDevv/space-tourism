@@ -84,10 +84,12 @@ body {
         font-size: 1.25rem;
         letter-spacing: 3.35px;
         width: 100%;
+        text-align: left;
     }
 
     @media screen and (min-width: 1024px) {
         padding-left: 140px;
+        font-size: 1.75rem;
     }
 
     span {
