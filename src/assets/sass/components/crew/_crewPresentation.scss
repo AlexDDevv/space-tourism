@@ -1,4 +1,8 @@
 .crew-info {
+    @media screen and (min-width: 768px) {
+        order: 1;
+    }
+
     .title-crew {
         font-family: $bellefair;
         font-weight: 400;
@@ -6,19 +10,65 @@
     }
     .rank-member {
         color: rgba(255, 255, 255, 0.5);
-        font-size: 1rem;
+        font-size: 0.9rem;
         margin-bottom: 10px;
+
+        @media screen and (min-width: 375px) {
+            font-size: 1rem;
+        }
+        @media screen and (min-width: 768px) {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        @media screen and (min-width: 1024px) {
+            font-size: 1.75rem;
+            margin-bottom: 20px;
+        }
+        @media screen and (min-width: 1440px) {
+            font-size: 2rem;
+        }
     }
     .crew-name {
         color: white;
-        font-size: 1.5rem;
-        margin-bottom: 20px;
+        font-size: 1.25rem;
+        margin-bottom: 15px;
+
+        @media screen and (min-width: 375px) {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        @media screen and (min-width: 768px) {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        @media screen and (min-width: 1024px) {
+            font-size: 3rem;
+        }
+        @media screen and (min-width: 1440px) {
+            font-size: 3.5rem;
+        }
     }
     .crew-bio {
         color: $textColor;
         font-family: $barlow;
-        font-size: 0.95rem;
-        line-height: 25px;
+        font-size: 0.85rem;
+        line-height: 23px;
         max-width: 520px;
+
+        @media screen and (min-width: 375px) {
+            font-size: 0.95rem;
+            line-height: 25px;
+            min-width: 332px;
+        }
+        @media screen and (min-width: 768px) {
+            font-size: 1rem;
+            line-height: 28px;
+            max-width: 590px;
+        }
+        @media screen and (min-width: 1024px) {
+            font-size: 1.15rem;
+            line-height: 32px;
+            max-width: 449px;
+        }
     }   
 }
