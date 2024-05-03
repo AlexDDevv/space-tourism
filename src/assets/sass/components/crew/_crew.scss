@@ -2,24 +2,69 @@
     margin-top: 30px;
     padding: 0 23px;
 
+    @media screen and (min-width: 1024px) {
+        margin-top: 65px;
+        padding: 0;
+    }
+
     .section-crew {
         @include center;
         flex-direction: column;
         gap: 25px;
         text-align: center;
 
+        @media screen and (min-width: 768px) {
+            gap: 40px;
+        }
+        @media screen and (min-width: 1024px) {
+            gap: 50px;
+        }
+
         .carrousel-container {
             @include center;
             flex-direction: column;
             gap: 25px;
+
+            @media screen and (min-width: 768px) {
+                gap: 46px;
+            }
+            @media screen and (min-width: 1024px) {
+                width: 100%;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 50px;
+                padding: 0 50px;
+            }
+            @media screen and (min-width: 1440px) {
+                padding: 0 140px;
+            }
 
             .crew-img-container {
                 width: 100%;
                 @include center;
                 border-bottom: 1px solid rgb(151, 151, 151, 0.5);
 
+                @media screen and (min-width: 768px) {
+                    order: 2;
+                    border-bottom: none;
+                    height: 532px;
+                }
+                @media screen and (min-width: 1024px) {
+                    width: 40%;
+                    max-height: 485px;
+                }
+
                 .crew-img {
-                    width: 175px;
+                    max-width: 175px;
+
+                    @media screen and (min-width: 768px) {
+                        height: 100%;
+                        max-width: 500px; 
+                    }
+                    @media screen and (min-width: 1024px) {
+                        width: 100%;
+                        object-fit: contain;
+                    }
 
                     &.display {
                         display: block;
@@ -27,6 +72,20 @@
                     &.hide {
                         display: none;
                     }
+                }
+            }
+            .flex {
+                @include center;
+                flex-direction: column;
+                gap: 25px;
+
+                @media screen and (min-width: 768px) {
+                    gap: 46px;
+                    order: 1;
+                }
+                @media screen and (min-width: 1024px) {
+                    align-items: flex-start;
+                    text-align: left;
                 }
             }
         }
