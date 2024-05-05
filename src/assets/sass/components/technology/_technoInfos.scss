@@ -1,0 +1,28 @@
+.techno-infos {
+    text-align: center;
+    padding: 0 20px;
+
+    .terminology {
+        color: $textColor;
+        font-family: $barlowCondensed;
+        font-size: 0.9rem;
+        font-weight: 400;
+        letter-spacing: 2.35px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+    .techno-title {
+        color: white;
+        font-family: $bellefair;
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    .techno-presentation {
+        color: $textColor;
+        font-family: $barlow;
+        font-size: 0.95rem;
+        line-height: 25px;
+    }
+}
