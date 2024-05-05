@@ -1,0 +1,34 @@
+.main-techno {
+    margin-top: 30px;
+    overflow: hidden;
+
+    section {
+        @include center;
+        flex-direction: column;
+        gap: 25px;
+
+        .techno-container {
+            @include center;
+            flex-direction: column;
+            gap: 25px;
+
+            .img-container {
+                width: 100%;
+                height: 170px;
+
+                img {
+                    width: 100%;
+                    height: 100%;    
+                    object-fit: cover;
+
+                    .display {
+                        display: block;
+                    }
+                    .hide {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
