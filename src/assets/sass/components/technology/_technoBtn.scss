@@ -2,6 +2,15 @@
     @include center;
     gap: 15px;
 
+    @media screen and (min-width: 768px) {
+        gap: 20px;        
+    }
+    @media screen and (min-width: 1024px) {
+        order: 1;
+        flex-direction: column;
+        gap: 30px;
+    }
+
     .input-container {
         .input-carrousel {
             display: none;
@@ -30,6 +39,22 @@
     
             &:hover {
                 border-color: white;
+            }
+
+            @media screen and (min-width: 768px) {
+                font-size: 1.5rem;
+                height: 60px;
+                width: 60px;
+            }
+            @media screen and (min-width: 1024px) {
+                font-size: 1.75rem;
+                height: 70px;
+                width: 70px;
+            }
+            @media screen and (min-width: 1440px) {
+                font-size: 2rem;
+                height: 80px;
+                width: 80px;
             }
         }
     }

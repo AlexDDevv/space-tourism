@@ -2,6 +2,14 @@
     text-align: center;
     padding: 0 20px;
 
+    @media screen and (min-width: 768px) {
+        padding: 0;
+    }
+    @media screen and (min-width: 1024px) {
+        order: 2;
+        text-align: left;
+    }
+
     .terminology {
         color: $textColor;
         font-family: $barlowCondensed;
@@ -10,6 +18,12 @@
         letter-spacing: 2.35px;
         text-transform: uppercase;
         margin-bottom: 10px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 1rem;
+            letter-spacing: 2.7px;   
+            margin-bottom: 20px;   
+        }
     }
     .techno-title {
         color: white;
@@ -18,11 +32,35 @@
         font-weight: 400;
         text-transform: uppercase;
         margin-bottom: 20px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 2.5rem;           
+        }
+        @media screen and (min-width: 1024px) {
+            font-size: 3rem;
+            margin-bottom: 30px;
+        }
+        @media screen and (min-width: 1440px) {
+            font-size: 3.5rem;
+            margin-bottom: 40; 
+        }
     }
     .techno-presentation {
         color: $textColor;
         font-family: $barlow;
         font-size: 0.95rem;
         line-height: 25px;
+        max-width: 415px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 1rem;   
+            line-height: 28px;     
+            max-width: 440px;
+        }
+        @media screen and (min-width: 1024px) {
+            font-size: 1.15rem;
+            line-height: 32px;
+            max-width: 455px;
+        }
     }
 }
