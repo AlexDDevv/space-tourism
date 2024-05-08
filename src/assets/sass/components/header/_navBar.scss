@@ -21,8 +21,8 @@
     }
     .menu-content {
         background: $bgMenu;
-        backdrop-filter: blur(50px);
-        -webkit-backdrop-filter: blur(50px);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         position: fixed;
         top: 0;
         right: 0;
