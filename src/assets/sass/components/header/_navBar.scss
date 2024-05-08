@@ -21,7 +21,6 @@
     }
     .menu-content {
         background: $bgMenu;
-        -webkit-backdrop-filter: blur(50px);
         backdrop-filter: blur(50px);
         position: fixed;
         top: 0;
@@ -30,6 +29,21 @@
         width: 0;
         transition: width 0.2s ease-in-out;
         z-index: 999;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-image: url(/bgMenu.png);
+            background-size: cover;
+            background-position: center;
+            filter: blur(50px);
+            opacity: 0;
+            z-index: -1;
+        }
     
         &.open-menu {
             width: 68%;
