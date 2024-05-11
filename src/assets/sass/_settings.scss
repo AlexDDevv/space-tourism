@@ -47,11 +47,6 @@ body {
         padding-bottom: 25px;
     }
 
-    @media screen and (min-width: 375px) and (max-width: 425px) {
-        height: 100%;
-        padding-bottom: 25px;
-    }
-
     @media screen and (min-width: 375px) and (max-width: 1024px) {
         background-image: url("/src/assets/home/background-home-tablet.jpg");
     }
@@ -62,6 +57,11 @@ body {
 }
 .destination-page {
     background-image: url("/src/assets/destination/background-destination-mobile.jpg");
+
+    @media screen and (min-width: 375px) and (max-width: 425px) {
+        height: 100%;
+        padding-bottom: 25px;
+    }
 
     @media screen and (min-width: 375px) and (max-width: 1024px) {
         background-image: url("/src/assets/destination/background-destination-tablet.jpg");
