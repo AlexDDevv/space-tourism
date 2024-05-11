@@ -40,12 +40,14 @@ body {
     position: relative;
     margin: 0 auto;
     transition: background-image 0.5s 0.1s;
-
-    @media screen and (min-width: 320px) and (max-width: 768px) {
-        height: 100svh;
-    }
+    height: 100svh;
 
     @media screen and (min-width: 320px) and (max-height: 650px) {
+        height: 100%;
+        padding-bottom: 25px;
+    }
+
+    @media screen and (min-width: 375px) and (max-width: 425px) {
         height: 100%;
         padding-bottom: 25px;
     }
@@ -61,15 +63,6 @@ body {
 .destination-page {
     background-image: url("/src/assets/destination/background-destination-mobile.jpg");
 
-    // @media screen and (min-width: 320px) and (max-width: 380px) {
-    //     height: 100%;
-    //     padding-bottom: 25px;
-    // }
-
-    // @media screen and (min-width: 380px) and (max-width: 425px) {
-    //     height: 100svh;
-    // }
-
     @media screen and (min-width: 375px) and (max-width: 1024px) {
         background-image: url("/src/assets/destination/background-destination-tablet.jpg");
     }
@@ -81,14 +74,6 @@ body {
 .crew-page {
     background-image: url("/src/assets/crew/background-crew-mobile.jpg");
 
-    // @media screen and (min-width: 320px) and (max-width: 380px) {
-    //     height: 100svh;
-    // }
-    
-    // @media screen and (min-width: 320px) and (max-width: 380px) and (max-height: 650px) {
-    //     height: 100%;
-    // }
-
     @media screen and (min-width: 375px) and (max-width: 1024px) {
         background-image: url("/src/assets/crew/background-crew-tablet.jpg");
     }
@@ -99,14 +84,6 @@ body {
 }
 .technology-page {
     background-image: url("/src/assets/technology/background-technology-mobile.jpg");
-
-    // @media screen and (min-width: 320px) and (max-width: 380px) {
-    //     height: 100svh;
-    // }
-
-    // @media screen and (min-width: 320px) and (max-width: 380px) and (max-height: 650px) {
-    //     height: 100%;
-    // }
 
     @media screen and (min-width: 375px) and (max-width: 1024px) {
         background-image: url("/src/assets/technology/background-technology-tablet.jpg");
